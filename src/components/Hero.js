@@ -1,7 +1,8 @@
 import React from "react";
 import { Col, Container, Row, Button } from "reactstrap";
 
-import img2 from "./Images/banner1.png";
+import img2 from "./Images/dataman.png";
+import avatar1 from "./Images/correctguy.png";
 
 const Hero = () => {
   const gradientBackgroundStyle = {
@@ -12,11 +13,13 @@ const Hero = () => {
     <React.Fragment>
       <section style={gradientBackgroundStyle}>
         <Container>
-          <Row className="align-items-center gy-4">
+          <Row className="align-items-center gy-2">
             <Col lg={6} className="order-2 order-lg-1">
               <div className=" text-light mt-sm-3">
-                <h4 className="" style={{color:'#DAFA7E'}}>#1 INVOICE SOLUTIONS</h4>
-                <h1 className=" fs-30 mb-3 mt-4 mb-3 fw-bold w-75">
+                <h5 className="" style={{ color: "#DAFA7E" }}>
+                  #1 INVOICE SOLUTIONS
+                </h5>
+                <h1 className=" fs-50 mb-3 ft-large mt-4 mb-3 fw-bold w-75">
                   Streamline Your Invoicing challenges
                 </h1>
                 <p className="mb-4 mt-3 w-75 ff-secondary">
@@ -25,25 +28,33 @@ const Hero = () => {
                 </p>
 
                 <Row>
-                  <Col sm={5}>
-                    <div className="vstack gap-2">
-                      <div className="d-flex align-items-center">
-                        <div className="flex-shrink-0 me-2">
-                          <div className="avatar-xs icon-effect">
-                            <div className="avatar-title bg-transparent text-success rounded-circle h2">
-                              <i className="ri-check-fill"></i>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="flex-grow-1">
-                          <h5 className="fs-14 mb-0">Very Affordable</h5>
-                        </div>
-                      </div>
-                    </div>
-                  </Col>
+                  <ul className="list-group-horizontal">
+                    <img
+                      src={avatar1}
+                      alt=""
+                      className="avatar-sm rounded-circle"
+                    />
+                    Very Affordable
+                  </ul>
+                  <ul>
+                    <img
+                      src={avatar1}
+                      alt=""
+                      className="avatar-sm rounded-circle"
+                    />
+                    Swift
+                  </ul>
+                  <ul>
+                    <img
+                      src={avatar1}
+                      alt=""
+                      className="avatar-sm rounded-circle"
+                    />
+                    Trusted
+                  </ul>
                 </Row>
 
-                <div className="mt-4 g-4">
+                <div className="mt-4 g-5">
                   <Button
                     to="/index"
                     className="btn btn-primary me-2"
@@ -60,9 +71,16 @@ const Hero = () => {
               </div>
             </Col>
 
-            <Col lg={6} sm={7} className="col-10 ms-auto order-2 order-lg-2">
-              <div style={{ height: "670px" }}>
-                <img src={img2} alt="" className="img-fluid" />
+            <Col lg={5} sm={4} className=" ms-auto order-2 order-lg-2">
+              <div className="card-animate" style={{ height: "670px" }}>
+                <img
+                  src={img2}
+                  alt=""
+                  className="img-fluid"
+                  style={{ maxWidth: "95%", transition: "transform 1.5s ease" }}
+                />
+                onMouseEnter={(e) => (e.target.style.transform = "scale(1.05)")}
+                onMouseLeave={(e) => (e.target.style.transform = "scale(1)")}
               </div>
             </Col>
           </Row>
